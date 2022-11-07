@@ -1,0 +1,218 @@
+body {
+  background-color: #38bdf8;
+  color: #1f2937;
+}
+
+.hidden {
+  display: none;
+}
+
+.player {
+  max-width: 500px;
+  margin: 3rem auto;
+  background: linear-gradient(white, #f3f3f3);
+  padding: 24px 32px 16px 32px;
+  border-radius: 20px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #0284c7;
+}
+
+.player-track-meta {
+  text-align: center;
+}
+
+.player-track-meta p {
+  margin: 0;
+  font-size: 14px;
+  color: #0ea5e9;
+  font-weight: 600;
+}
+
+.player-track-meta span {
+  opacity: 0.5;
+  font-size: 13px;
+  font-weight: 300;
+  padding: 0 2px;
+  position: relative;
+  top: 1px;
+  color: #9ca3af;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+}
+
+.player-play-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #d1d5db;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.player-play-btn:hover {
+  background: #f0f9ff;
+  border-color: #38bdf8;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.player-play-btn svg {
+  stroke: currentColor;
+  color: #9ca3af;
+  position: relative;
+  left: 0.5px;
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.player-play-btn:hover svg {
+  color: #38bdf8;
+}
+
+.player-timeline {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+.player-progress {
+  display: flex;
+  postion: relative;
+  height: 10px;
+  background: #f9fafb;
+  border-radius: 25px;
+  margin: 0 5px;
+  border: 1px solid #d1d5db;
+  flex: 10;
+  flex-basis: 100%;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.player-progress-filled {
+  height: 10px;
+  background: #38bdf8;
+  flex: 0;
+  flex-basis: 0%;
+  border-radius: 25px;
+}
+
+.player-time {
+  font-family: monospace;
+  padding: 2px 5px;
+}
+
+.player-volume-container {
+  width: 15%;
+}
+
+.player-volume {
+  height: 38px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  background: transparent;
+}
+
+.player-volume:focus {
+  outline: none;
+}
+
+.player-volume::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  background: #f9fafb;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.player-volume::-webkit-slider-thumb {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #d1d5db;
+  height: 16px;
+  width: 16px;
+  border-radius: 100px;
+  background: #f3f4f6;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4px;
+}
+
+.player-volume:focus::-webkit-slider-runnable-track {
+  background: #38bdf8;
+}
+
+.player-volume::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  background: #f9fafb;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.player-volume::-moz-range-thumb {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #d1d5db;
+  height: 16px;
+  width: 16px;
+  border-radius: 100px;
+  background: #f3f4f6;
+  cursor: pointer;
+  margin-top: -4px;
+}
+
+.player-volume::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  background: #f9fafb;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.player-volume::-ms-fill-lower {
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+}
+
+.player-volume::-ms-fill-upper {
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+}
+
+.player-volume::-ms-thumb {
+  margin-top: 1px;
+  height: 15px;
+  width: 15px;
+  border-radius: 5px;
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+.player-volume:focus::-ms-fill-lower {
+  background: #38bdf8;
+}
+
+.player-volume:focus::-ms-fill-upper {
+  background: #38bdf8;
+}
